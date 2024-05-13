@@ -1,0 +1,106 @@
+{
+  "id": "Escenario 01",
+  "viewports": [
+    {
+      "label": "destop",
+      "width": 1000,
+      "height": 660
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Login Page",
+      "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/ghost-3-42-8/cypress/screenshots/ES01/01_Escenario_01_pruebas_login.png",
+      "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/cypress/screenshots/ES01/01_Escenario_01_pruebas_login.png",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+
+    {
+      "label": "Crear Pagina",
+      "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/ghost-3-42-8/cypress/screenshots/ES01/02_Escenario_01_pruebas_pagina.png",
+      "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/cypress/screenshots/ES01/02_Escenario_01_pruebas_pagina.png",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+
+    {
+      "label": "Publicar Pagina",
+      "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/ghost-3-42-8/cypress/screenshots/ES01/03_Escenario_01_pruebas_publicar.png",
+      "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/cypress/screenshots/ES01/03_Escenario_01_pruebas_publicar.png",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+
+    {
+      "label": "Lista Pagina",
+      "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/ghost-3-42-8/cypress/screenshots/ES01/04_Escenario_01_pruebas_lista_paginas.png",
+      "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/cypress/screenshots/ES01/04_Escenario_01_pruebas_lista_paginas.png",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+
+    
+
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

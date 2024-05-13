@@ -1,0 +1,60 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\Escenario01_Login_Page_0_document_0_destop.png",
+        "test": "..\\bitmaps_test\\20240512-210121\\Escenario01_Login_Page_0_document_0_destop.png",
+        "selector": "document",
+        "fileName": "Escenario01_Login_Page_0_document_0_destop.png",
+        "label": "Login Page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/ghost-3-42-8/cypress/screenshots/ES01/01_Escenario_01_pruebas_login.png",
+        "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/cypress/screenshots/ES01/01_Escenario_01_pruebas_login.png",
+        "expect": 0,
+        "viewportLabel": "destop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 10.971666666666668,
+          "misMatchPercentage": "10.97",
+          "analysisTime": 102
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-210121\\failed_diff_Escenario01_Login_Page_0_document_0_destop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\Escenario01_Crear_Pagina_0_document_0_destop.png",
+        "test": "..\\bitmaps_test\\20240512-210121\\Escenario01_Crear_Pagina_0_document_0_destop.png",
+        "selector": "document",
+        "fileName": "Escenario01_Crear_Pagina_0_document_0_destop.png",
+        "label": "Crear Pagina",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/ghost-3-42-8/cypress/screenshots/ES01/02_Escenario_01_pruebas_pagina.png",
+        "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Cypress/cypress/screenshots/ES01/02_Escenario_01_pruebas_pagina.png",
+        "expect": 0,
+        "viewportLabel": "destop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 2.5607575757575756,
+          "misMatchPercentage": "2.56",
+          "analysisTime": 79
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-210121\\failed_diff_Escenario01_Crear_Pagina_0_document_0_destop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "Escenario 01"
+}

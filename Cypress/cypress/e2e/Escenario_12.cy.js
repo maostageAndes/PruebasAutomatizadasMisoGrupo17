@@ -1,29 +1,29 @@
 import { LoginPage } from "./Page_Object/login_page";
+import { AccionesTag } from "./Page_Object/tag_page";
+import { ForAllPages } from "./Page_Object/forAll_pages";
+
 
 const loginPage = new LoginPage();
+const accTag = new AccionesTag();
+const fAP = new ForAllPages();
+
+//Escenario: Como usuario quiero crear un nuevo Tag con el name "ES12 tag" y publicarla
  
-describe('Escenario_12', () => {
 
 it ("Login", function (){
-  //Given
+  //Given --navegar a la web admin de ghost
   loginPage.baseUrl();
 
-  //When
+  //When --hacer login, crear tag
   loginPage.enterUsername();
   loginPage.enterPassword();
+  fAP.screenShoot('ES12/01_Escenario_12_pruebas_login');
   loginPage.clickLogin();
-  cy.wait(100);
-  cy.get('a[href*="#/tags/"]').click();
-  cy.contains("New tag").click();
-  cy.get('[id="tag-name"]').type("Alerta");
-  cy.wait(500);
-  cy.get('[data-test-task-button-state="idle"]').click()
-  cy.wait(500);
+  accTag.crearTag("ES12 tag");
+  fAP.screenShoot('ES12/02_Escenario_12_pruebas_crear');
 
-  //Then
-  cy.get('[class="active ember-view"]').click();
-  cy.get('[id^=ember]')
-  .find('.gh-tag-list-name')
-  .should('contain', "Alerta");
-});
+  //Then --confirmar que se ha creado un nuevo Tag llamado “ES 12 tag”
+  accTag.verificarTitleTag("ES12 tag");
+  fAP.screenShoot('ES12/03_Escenario_12_pruebas_listado');
+  
 });

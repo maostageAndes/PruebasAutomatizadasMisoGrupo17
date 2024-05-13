@@ -16,12 +16,12 @@ export class LoginPage{
     }
 
     enterPassword(){
-    cy.get(this.password_textbox).type(this.password);
+        cy.get(this.password_textbox).type(this.password);
     }
 
     clickLogin(){
-    cy.get(this.login_button).click();
-    cy.wait(5000);
+        cy.get(this.login_button).click();
+        cy.wait(5000);
     }
 
 }

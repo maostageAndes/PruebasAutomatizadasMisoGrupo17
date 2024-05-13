@@ -1,47 +1,40 @@
 import { LoginPage } from "./Page_Object/login_page";
+import { PostPage } from "./Page_Object/post_page";
+import { ForAllPages } from "./Page_Object/forAll_pages";
 
 const loginPage = new LoginPage();
- 
-describe('Escenario_07', () => {
+const postPage = new PostPage();
+const fAP = new ForAllPages();
 
-it ("Login", function (){
-  //Given
-  loginPage.baseUrl();
-  //when
-  loginPage.enterUsername();
-  loginPage.enterPassword();
-  loginPage.clickLogin();
-  cy.wait(100);
-  cy.get('a[href*="#/posts/"]').click();
-  cy.contains("New post").click();
-  cy.get('[id^=ember]').find('textarea').type("ES07 Ghost Post");
-  cy.wait(500);
-  cy.get("p").type("contenido ES07");
-  cy.wait(800);
-  cy.contains('Publish').click();
-  cy.wait(500);
-  cy.contains('Posts');
-  cy.contains('Continue, final review').click();
-  cy.contains('Publish & send, right now').click();
-  cy.wait(20000);
-  cy.contains('Back to dashboard').click();
-  cy.contains('Posts').click();
-  cy.get('[id^=ember]').find('.gh-content-entry-title').should('contain',"ES07 Ghost Post");
+//Escenario: Como usuario quiero editar el titulo de un post que he creado con el nuevo titulo
+//Escenario: subtitulo “ES07 Ghost Post Editado” y publicarlo
 
+  it ("Escenario_07_pruebas", function (){
 
-  // Editar
-  cy.contains('ES07 Ghost Post').click(); // no es con el botón editar.
-  cy.get('[id^=ember]').find('textarea').clear().type("ES07 Ghost Post Editado");
-  cy.wait(500);
-  cy.get("p").clear().type("contenido ES07 Editado");
-  cy.wait(800);
-  cy.contains('Update').click();
-  cy.wait(500);
-  cy.contains('Posts').click();
-  
-  //Then
-  
-  cy.get('[id^=ember]').find('.gh-content-entry-title').should('contain',"ES07 Ghost Post Editado");
+    //Given --navegar a la web admin de ghost
+    loginPage.baseUrl();
+    fAP.screenShoot('ES07/01_Escenario_07_pruebas_pantalla_inicio');
 
-});
-});
+    //When --hacer login, crear post, publicar post y editar post
+      loginPage.enterUsername();
+      loginPage.enterPassword();
+      fAP.screenShoot('ES07/02_Escenario_07_pruebas_login');
+      loginPage.clickLogin();
+      postPage.navigateToPosts();
+      fAP.screenShoot('ES07/03_Escenario_07_pruebas_Web');
+      postPage.createNewPost('ES07 Ghost Post', 'contenido ES07');
+      fAP.screenShoot('ES07/04_Escenario_07_pruebas_post');
+      postPage.publishPost();
+      fAP.screenShoot('ES07/05_Escenario_07_pruebas_publicado');
+      postPage.verifyPost('ES07 Ghost Post');
+      fAP.screenShoot('ES07/06_Escenario_07_pruebas_verificado');
+      postPage.selectPost('ES07 Ghost Post');
+      postPage.editPost('ES07 Ghost Post Editado','contenido ES07 Editado');
+      fAP.screenShoot('ES07/07_Escenario_07_pruebas_editado');
+      postPage.updatePost();
+      fAP.screenShoot('ES07/08_Escenario_07_pruebas_actualizado');
+
+     //Then --confirmar que hay una pagina publicada con el title " ES07 Ghost Post Editado "
+      postPage.verifyPostlist('ES07 Ghost Post Editado', 'contenido ES07 Editado');
+      fAP.screenShoot('ES07/09_Escenario_07_pruebas_editada_lista');
+  });

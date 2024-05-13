@@ -1,49 +1,41 @@
 import { LoginPage } from "./Page_Object/login_page";
+import { PostPage } from "./Page_Object/post_page";
+import { AccionesTag } from "./Page_Object/tag_page";
+import { ForAllPages } from "./Page_Object/forAll_pages";
 
 const loginPage = new LoginPage();
- 
-describe('Escenario_09', () => {
+const postPage = new PostPage();
+const accTag = new AccionesTag();
+const fAP = new ForAllPages();
 
-it ("Login", function (){
+//Escenario: Como usuario quiero borrar una pagina de mi lista de paginas
 
-  //Given
-  loginPage.baseUrl();
-  //When
-  loginPage.enterUsername();
-  loginPage.enterPassword();
-  loginPage.clickLogin();
-  cy.wait(100);
-  cy.get('a[href*="#/posts/"]').click();
-  cy.contains("New post").click();
-  cy.get('[id^=ember]').find('textarea').type("ES09 Ghost Post");
-  cy.wait(500);
-  cy.get("p").type("contenido ES09");
-  cy.wait(800);
-  cy.contains('Publish').click();
-  cy.wait(500);
-  cy.contains('Posts');
-  cy.contains('Continue, final review').click();
-  cy.contains('Publish & send, right now').click();
-  cy.wait(20000);
-  cy.contains('Back to dashboard').click();
-  cy.contains('Posts').click();
+it ("Escenario_09_pruebas", function () {
 
-  // Añadir  tag
-  cy.contains('ES09 Ghost Post').rightclick();
-  cy.contains('Add a tag').click();
-  cy.wait(200);
-  cy.get('.ember-power-select-status-icon').click();
-  cy.get('[aria-current="true"]').click();
-  cy.get('.modal-content').click();
-  cy.get('[data-test-task-button-state="idle"]').click();
-  cy.contains('ES09 Ghost Post').click();
-  cy.wait(1000);
-  cy.get('.settings-menu-toggle > span').click ();
+   //Given --navegar a la web admin de ghost
+   loginPage.baseUrl();
+   fAP.screenShoot('ES09/01_Escenario_09_pruebas_pantalla_inicio');
 
-   //Then
-  cy.contains('New').should('contain',"News");
- 
-                    
+   //When --hacer login, crear post, publicar post, añadir tag
+   loginPage.enterUsername();
+   loginPage.enterPassword();
+   loginPage.clickLogin();
+   fAP.screenShoot('ES09/01_Escenario_02_pruebas_login');
+   postPage.navigateToPosts();
+   fAP.screenShoot('ES09/03_Escenario_09_pruebas_Web');
+   postPage.createNewPost("ES09 Ghost Post", "contenido ES09");
+   fAP.screenShoot('ES09/04_Escenario_09_pruebas_post');
+   postPage.publishPost();
+   fAP.screenShoot('ES09/05_Escenario_09_pruebas_publicar');
+   postPage.verifyPost('ES09 Ghost Post');
+   accTag.crearTag('ES09 Tag');
+   fAP.screenShoot('ES09/06_Escenario_06_pruebas_crear_tag');
+   postPage.addTagToPost('ES09 Ghost Post', 'ES09 Tag');
+   fAP.screenShoot('ES09/07_Escenario_06_pruebas_añadir_tag');
+  
 
-});
-});
+   //Then --confirmar en el post que se ha añadido el tag "ES09 Tag"
+   postPage.selectPost('ES09 Ghost Post');
+   postPage.verifyTagInPost('ES09 Tag');
+   fAP.screenShoot('ES09/08_Escenario_06_pruebas_verificar_tag');
+ });

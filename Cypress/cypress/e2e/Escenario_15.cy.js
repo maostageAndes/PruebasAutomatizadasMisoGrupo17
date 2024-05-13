@@ -1,26 +1,31 @@
 import { LoginPage } from "./Page_Object/login_page";
-import { AccionesPagina } from "./Page_Object/admin_home";
+import { AccionesSettings } from "./Page_Object/settings_page";
+import { ForAllPages } from "./Page_Object/forAll_pages";
 
 const loginPage = new LoginPage();
-const creaPagina = new AccionesPagina();
+const cambioSetting = new AccionesSettings();
+const fAP = new ForAllPages();
 
 
-  it("Escenario_01_pruebas", function () {
-    //Given
+//Escenario: Como usuario quiero cambiar el site title por “ES15 Proyecto Miso grupo 17”
+
+  it("Escenario_015_pruebas", function () {
+
+    //Given --navegar a la web admin de ghost
     loginPage.baseUrl();
-    //When
+
+    //When --hacer login, 
     loginPage.enterUsername();
     loginPage.enterPassword();
+    fAP.screenShoot('ES15/01_Escenario_15_pruebas_login');
     loginPage.clickLogin();
-    cy.get('[data-test-nav="settings"]').click();
-    cy.get('[class="flex items-center justify-start rounded gap-4"] ').first().click();
-    cy.get('[placeholder="Site title"]').first().clear().type('ES15 Proyecto Miso grupo 17{enter}');
-    cy.contains('Save').click();
-    cy.wait(5000);
-    cy.get('[data-testid="exit-settings"]').click();    
-
-    //Then
-    cy.get('.gh-nav-menu-details-sitetitle').should('contain','ES15 Proyecto Miso grupo 17')
+    cambioSetting.cambiarNombreGhost('ES15 Proyecto Miso grupo 17');
+    fAP.screenShoot('ES15/02_Escenario_15_pruebas_cambio');
+    
+    //Then --confirmar que hay una pagina publicada con el title “ES01 Ghost page”
+    cambioSetting.verificarNombreGhost('ES15 Proyecto Miso grupo 17');
+    fAP.screenShoot('ES15/03_Escenario_15_pruebas_resultado');
+    
     
 
     
