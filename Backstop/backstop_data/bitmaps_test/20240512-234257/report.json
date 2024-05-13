@@ -1,0 +1,114 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\Escenario01_Login_Page_0_document_0_destop.png",
+        "test": "..\\bitmaps_test\\20240512-234257\\Escenario01_Login_Page_0_document_0_destop.png",
+        "selector": "document",
+        "fileName": "Escenario01_Login_Page_0_document_0_destop.png",
+        "label": "Login Page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-5-82-4/ES01/01_Escenario_01_pruebas_login.png",
+        "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-3-42-8/ES01/01_Escenario_01_pruebas_login.png",
+        "expect": 0,
+        "viewportLabel": "destop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 10.882575757575758,
+          "misMatchPercentage": "10.88",
+          "analysisTime": 127
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-234257\\failed_diff_Escenario01_Login_Page_0_document_0_destop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\Escenario01_Crear_pagina_0_document_0_destop.png",
+        "test": "..\\bitmaps_test\\20240512-234257\\Escenario01_Crear_pagina_0_document_0_destop.png",
+        "selector": "document",
+        "fileName": "Escenario01_Crear_pagina_0_document_0_destop.png",
+        "label": "Crear pagina",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-5-82-4/ES01/02_Escenario_01_pruebas_pagina.png",
+        "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-3-42-8/ES01/02_Escenario_01_pruebas_pagina.png",
+        "expect": 0,
+        "viewportLabel": "destop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 2.651060606060606,
+          "misMatchPercentage": "2.65",
+          "analysisTime": 119
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-234257\\failed_diff_Escenario01_Crear_pagina_0_document_0_destop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\Escenario01_Publicar_pagina_0_document_0_destop.png",
+        "test": "..\\bitmaps_test\\20240512-234257\\Escenario01_Publicar_pagina_0_document_0_destop.png",
+        "selector": "document",
+        "fileName": "Escenario01_Publicar_pagina_0_document_0_destop.png",
+        "label": "Publicar pagina",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-5-82-4/ES01/03_Escenario_01_pruebas_publicar.png",
+        "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-3-42-8/ES01/03_Escenario_01_pruebas_publicar.png",
+        "expect": 0,
+        "viewportLabel": "destop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 12.427575757575758,
+          "misMatchPercentage": "12.43",
+          "analysisTime": 125
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-234257\\failed_diff_Escenario01_Publicar_pagina_0_document_0_destop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\Escenario01_Listar_pagina_0_document_0_destop.png",
+        "test": "..\\bitmaps_test\\20240512-234257\\Escenario01_Listar_pagina_0_document_0_destop.png",
+        "selector": "document",
+        "fileName": "Escenario01_Listar_pagina_0_document_0_destop.png",
+        "label": "Listar pagina",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-5-82-4/ES01/04_Escenario_01_pruebas_lista_paginas.png",
+        "referenceUrl": "file:///C:/Users/usuario%202/Desktop/MISO/Pruebas%20automatizadas%20de%20software/semana%205/Entrega%20semana%205/PruebasAutomatizadasMisoGrupo17/Backstop/screenshot/Ghost-3-42-8/ES01/04_Escenario_01_pruebas_lista_paginas.png",
+        "expect": 0,
+        "viewportLabel": "destop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 13.195909090909092,
+          "misMatchPercentage": "13.20",
+          "analysisTime": 135
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-234257\\failed_diff_Escenario01_Listar_pagina_0_document_0_destop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "Escenario 01"
+}
