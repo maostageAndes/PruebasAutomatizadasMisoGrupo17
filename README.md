@@ -42,14 +42,9 @@ npm init -y
 npm install kraken-node
 npm install android-platform-tools
 npm install appium
+npx kraken-node gen
 
-4. En el archivo hooks.js incluir las siguientes lineas:
-const dns = require("dns");
-Before(async function(){
-	dns.setDefaultREsultOrder("ipv4first");
-});
-
-5. Para ejecutar se utiliza:
+4. Los escenarios se encuentran en la carpeta features/web/support, para la ejecucion de cada uno se debe mover el escenario de esta carpeta hacia la carpeta features. De esa forma, uno por uno. Solo puede haber un archivo de escenario (extensión .features) en la carpeta features. Para la ejecución se utiliza:
 npx kraken-node run
 
 
