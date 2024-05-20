@@ -1,4 +1,69 @@
-Herramientas necesarias para el criterio de la semana 5
+
+__ENTREGA SEMANA 7__
+| Herramienta   |   Versión     |
+| ------------- | ------------- |
+| Node.js  | 18.20.1 |
+| Npm  | 10.5.2  |
+| Ghost  | 5.82.0  |
+| Cypress  | 13.9.0  |
+
+__Instalación y Ejecución:__
+- Para el despliegue del sistema se requiere contar con Node.js, Npm y Cypress instalados, así como Visual Studio Code. El detalle de la instalación se puede consultar líneas abajo en la sección de "Configuración de Entorno" e "Instalación y Ejecución de Cypress" de la semana 6.
+Para la ejecución del proyecto:
+- Proceder con descargar el release 2.0.0. Luego de posicionarse en la carpeta "Cypress" proceder via línea de comandos con la ejecución "npx cypress open".
+- Se dispone de 96 escenarios, los cuales están desplegados en los archivos de la carpeta Cypress\cypress\e2e\semana7\.
+
+__Descripción de las estrategias usadas:__
+
+Para la entrega de la semana 7 se usaron las 3 estrategias (Pool de Datos a Priori, Pool de Datos Pseudoaleatorio Dinámico y Escenarios Aleatorios) en un total de 96 escenarios (cabe recordar que nuestro grupo está formado por 3 integrantes, y no 4, por lo que nos corresponde entregar al menos 90 escenarios), tomando como base los escenarios de la última entrega en Cypress:
+1. Crear Página
+2. Editar Página
+3. Crear Post
+4. Editar Post
+5. Crear Tag
+6. Editar Tag
+7. Login
+
+- Para la estrategia de Pool de Datos a Priori se hizo uso de Mockaroo con su herramienta para generación de archivos en formato JSON.
+- Para la estrategia de Pool de Datos Pseudoaleatorio Dinámico se hizo uso de Mockaroo con su herramienta de Mock API.
+- Para la estrategia de Escenarios Aleatorios se hizo uso de Faker.
+- Estas estrategias se integran en los escenarios de pruebas y nos proporcionan una cobertura de prueba completa y diversa, asegurando que en el sistema pueda manejar una variedad de situaciones y conjuntos de datos.
+- Al automatizar la generación de datos con Mockaroo y Faker, vemos que se ahorra tiempo y esfuerzo (en comparación con efectuar pruebas manuales), lo que aumenta la eficiencia de las pruebas, y la cantidad de las mismas.
+
+Con relación al total de pruebas se hizo un uso mayor de escenarios aleatorios con Faker debido a su facilidad de implementación, uso y ejecución, con relación a las otras 2 estrategias.
+
+A continuación se presenta el detalle del despliegue de pruebas:
+1. Crear Página
+- Se usó con Datos a Priori (3 escenarios) para efectuar una prueba positiva con un título correcto y un contenido vacío.
+- Se usó con Datos Pseudoaleatorios (4 escenarios) para verificar datos inválidos como código SQL y naughty string.
+- Se usó con Datos Aleatorios (10 escenarios) para evaluar datos inválidos y pruebas de frontera.
+2. Editar Página
+- Se usó con Datos a Priori (2 escenarios) para efectuar una prueba positiva con un título correcto y un contenido vacío.
+- Se usó con Datos Pseudoaleatorios (2 escenarios) para verificar datos inválidos como código SQL y naughty string.
+- Se usó con Datos Aleatorios (5 escenarios) para evaluar datos inválidos y pruebas de frontera.
+3. Crear Post
+- Se usó con Datos a Priori (2 escenarios) para efectuar una prueba positiva con un título correcto y un contenido vacío.
+- Se usó con Datos Pseudoaleatorios (4 escenarios) para verificar datos inválidos como código SQL y naughty string.
+- Se usó con Datos Aleatorios (10 escenarios) para evaluar datos inválidos y pruebas de frontera.
+4. Editar Post
+- Se usó con Datos a Priori (2 escenarios) para efectuar una prueba positiva con un título correcto y un contenido vacío.
+- Se usó con Datos Pseudoaleatorios (4 escenarios) para verificar datos inválidos como código SQL y naughty string.
+- Se usó con Datos Aleatorios (10 escenarios) para evaluar datos inválidos y pruebas de frontera.
+5. Crear Tag
+- Se usó con Datos a Priori (3 escenarios) para efectuar una prueba positiva con un título correcto y un contenido vacío.
+- Se usó con Datos Pseudoaleatorios (4 escenarios) para verificar datos inválidos como código SQL y naughty string.
+- Se usó con Datos Aleatorios (10 escenarios) para evaluar datos inválidos y pruebas de frontera.
+6. Editar Tag
+- Se usó con Datos a Priori (3 escenarios) para efectuar una prueba positiva con un título correcto y un contenido vacío.
+- Se usó con Datos Pseudoaleatorios (4 escenarios) para verificar datos inválidos como código SQL y naughty string.
+- Se usó con Datos Aleatorios (10 escenarios) para evaluar datos inválidos y pruebas de frontera.
+
+
+
+
+__ENTREGA SEMANA 6__
+
+Herramientas necesarias para el criterio de la semana 6
 
 | Herramienta   |   Versión     |
 | ------------- | ------------- |
