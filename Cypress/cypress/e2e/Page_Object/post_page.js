@@ -8,16 +8,25 @@ export class PostPage {
     createNewPost(title_post, body_post) {
       cy.wait(100);
       cy.contains("New post").click();
-      cy.get('[id^=ember]').find('textarea').type(title_post);
-      cy.wait(500);
-      cy.get('[class="kg-prose"]').type(body_post);
-      cy.wait(800);
+      if (title_post.length > 0) {
+        cy.get('[id^=ember]').find('textarea').type (title_post,{ parseSpecialCharSequences: false });
+        cy.wait(500);
+      }
+      if (body_post.length > 0) {
+        cy.get('[class="kg-prose"]').type (body_post,{ parseSpecialCharSequences: false });
+        cy.wait(800);
+      }
+      
+      //cy.get('[id^=ember]').find('textarea').type(title_post);
+      //cy.wait(500);
+      //cy.get('[class="kg-prose"]').type(body_post);
+      //cy.wait(800);
       
       }
   
     publishPost() {
       cy.contains('Publish').click();
-      cy.wait(500);
+      cy.wait(800);
       cy.contains('Post');
       cy.contains('Continue, final review').click();
       cy.contains('Publish & send, right now').click();
@@ -35,14 +44,30 @@ export class PostPage {
     }
 
     selectPost(title_post) {
-      cy.contains(title_post).click();
+      cy.contains(title_post).click({force: true});
     }
   
     editPost(title_post_nuevo, content_post_nuevo ) {
-      cy.get('[id^=ember]').find('textarea').clear().type(title_post_nuevo);
-      cy.wait(500);
-      cy.get("p").clear().type(content_post_nuevo);
-      cy.wait(800);
+
+      if (title_post_nuevo.length > 0) {
+        cy.get('[id^=ember]').find('textarea').clear().type (title_post_nuevo,{ parseSpecialCharSequences: false });
+        cy.wait(500);
+      }
+
+      else {
+        cy.get('[id^=ember]').find('textarea').clear();
+
+      }
+
+      if (content_post_nuevo.length > 0) {
+        cy.get("p").clear().type (content_post_nuevo,{ parseSpecialCharSequences: false });
+        cy.wait(800);
+      }
+
+    else {
+      cy.get("p").clear();
+
+    }
     }
 
     updatePost() {

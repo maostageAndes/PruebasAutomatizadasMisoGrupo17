@@ -2,6 +2,7 @@ import { LoginPage } from "./Page_Object/login_page";
 import { AccionesPagina } from "./Page_Object/pages_page";
 import { ForAllPages } from "./Page_Object/forAll_pages";
 
+
 const loginPage = new LoginPage();
 const creaPagina = new AccionesPagina();
 const fAP = new ForAllPages();
