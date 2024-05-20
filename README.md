@@ -57,8 +57,8 @@ A continuación se presenta el detalle del despliegue de pruebas:
 - Se usó con Datos a Priori (3 escenarios) para efectuar una prueba positiva con un título correcto y un contenido vacío.
 - Se usó con Datos Pseudoaleatorios (4 escenarios) para verificar datos inválidos como código SQL y naughty string.
 - Se usó con Datos Aleatorios (10 escenarios) para evaluar datos inválidos y pruebas de frontera.
-
-
+7. Login
+- Se usó con Datos Aleatorios (4 escenarios) para evaluar datos inválidos.
 
 
 __ENTREGA SEMANA 6__
